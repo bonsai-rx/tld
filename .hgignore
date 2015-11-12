@@ -1,0 +1,8 @@
+syntax: glob
+OpenTld.Net/OpenTld.Net/Debug
+OpenTld.Net/packages
+OpenTld.Net/ipch
+OpenTld.Net/OpenTld.Net/OpenTld.Net.vcxproj.filters
+OpenTld.Net/OpenTld.Net.sdf
+OpenTld.Net/OpenTld.Net.opensdf
+.hgsubstate
