@@ -11,12 +11,12 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly:AssemblyTitleAttribute("OpenTldNet")];
-[assembly:AssemblyDescriptionAttribute("")];
+[assembly:AssemblyTitleAttribute("OpenTLD.NET")];
+[assembly:AssemblyDescriptionAttribute("A managed wrapper to the OpenTLD open-source tracking library.")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("")];
-[assembly:AssemblyProductAttribute("OpenTldNet")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c)  2015")];
+[assembly:AssemblyCompanyAttribute("Xavier Faure")];
+[assembly:AssemblyProductAttribute("OpenTld.Net")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) Xavier Faure 2015")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
@@ -31,7 +31,8 @@ using namespace System::Security::Permissions;
 // You can specify all the value or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
 
-[assembly:AssemblyVersionAttribute("1.0.0")];
+[assembly:AssemblyVersionAttribute("0.1.0.0")];
+[assembly:AssemblyInformationalVersionAttribute("0.1.0")];
 
 [assembly:ComVisible(false)];
 
