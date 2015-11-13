@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenTld.Net", "OpenTld.Net\OpenTld.Net.vcxproj", "{D0E28EB0-D56D-42F2-B2A5-5A3E3FC3968E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCV.Net", "..\Externals\OpenCV.Net\OpenCV.Net\OpenCV.Net.csproj", "{DAF4D704-2C86-4657-9210-DB5B847BA8BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCV.Net", "Externals\OpenCV.Net\OpenCV.Net\OpenCV.Net.csproj", "{DAF4D704-2C86-4657-9210-DB5B847BA8BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
