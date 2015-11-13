@@ -6,3 +6,7 @@ OpenTld.Net/OpenTld.Net/OpenTld.Net.vcxproj.filters
 OpenTld.Net/OpenTld.Net.sdf
 OpenTld.Net/OpenTld.Net.opensdf
 .hgsubstate
+OpenTld.Net.sdf
+OpenTld.Net/x64
+packages
+x64
