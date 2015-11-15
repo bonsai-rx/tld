@@ -50,43 +50,51 @@ namespace OpenTldNet {
 		/// <param name="image">input image</param>
 		void ProcessImage(OpenCV::Net::IplImage ^image);
 
-		property OpenCV::Net::Rect^ CurrentBoundingBox
+		/// <summary>
+		/// Gets or sets a value indicating whether new object poses should be recorded.
+		/// </summary>
+		property bool LearningEnabled
 		{
-			OpenCV::Net::Rect ^get()
+			bool get() { return tldTracker->learningEnabled; }
+			void set(bool value) { tldTracker->learningEnabled = value; }
+		}
+
+		/// <summary>
+		/// Gets or sets a value indicating whether the detector is switched off when
+		/// tracker is available.
+		/// </summary>
+		property bool Alternating
+		{
+			bool get() { return tldTracker->alternating; }
+			void set(bool value) { tldTracker->alternating = value; }
+		}
+
+		/// <summary>
+		/// Gets the currently tracked bounding box.
+		/// </summary>
+		property Nullable<OpenCV::Net::Rect> CurrentBoundingBox
+		{
+			Nullable<OpenCV::Net::Rect> get()
 			{
 				if(tldTracker->currBB != NULL)
 				{
-					return gcnew OpenCV::Net::Rect( tldTracker->currBB->x, tldTracker->currBB->y, tldTracker->currBB->width, tldTracker->currBB->height);
+					return Nullable<OpenCV::Net::Rect>(OpenCV::Net::Rect(
+						tldTracker->currBB->x,
+						tldTracker->currBB->y,
+						tldTracker->currBB->width,
+						tldTracker->currBB->height));
 				}
-				else 
-					return nullptr;			
+				else return Nullable<OpenCV::Net::Rect>();	
 			}
 		}
 
-		property bool LearningEnabled
+		/// <summary>
+		/// Gets the confidence level for the currently tracked bounding box.
+		/// </summary>
+		property float CurrentConfidence
 		{
-			bool get()
-			{
-				return tldTracker->learningEnabled;
-			}
-			void set(bool value)
-			{
-				tldTracker->learningEnabled = value;	
-			}
+			float get() { return tldTracker->currConf; }
 		}
-
-		property bool Alternating
-		{
-			bool get()
-			{
-				return tldTracker->alternating;
-			}
-			void set(bool value)
-			{
-				tldTracker->alternating = value;	
-			}
-		}
-
 	private:
 		tld::TLD *tldTracker;
 	};
