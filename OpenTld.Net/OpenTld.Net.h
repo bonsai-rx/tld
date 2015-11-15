@@ -8,23 +8,23 @@ using namespace System;
 
 namespace OpenTldNet {
 
-	public ref class OpenTLD
+	public ref class OpenTld
 	{
 	public:
 		/// <summary>
-		/// Initializes a new instance of the <see cref="OpenTLD"/> class.
+		/// Initializes a new instance of the <see cref="OpenTld"/> class.
 		/// </summary>
-		OpenTLD();
+		OpenTld();
 
 		/// <summary>
-		/// Destructs an instance of the <see cref="OpenTLD"/> class.
+		/// Destructs an instance of the <see cref="OpenTld"/> class.
 		/// </summary>
-		~OpenTLD();
+		~OpenTld();
 
 		/// <summary>
-		/// Finalizes an instance of the <see cref="OpenTLD"/> class.
+		/// Finalizes an instance of the <see cref="OpenTld"/> class.
 		/// </summary>
-		!OpenTLD();
+		!OpenTld();
 
 		/// <summary>
 		/// Initializes this instance.
