@@ -5,17 +5,17 @@
 #include "OpenTld.Net.h"
 
 
-OpenTldNet::OpenTLD::OpenTLD()
+OpenTldNet::OpenTld::OpenTld()
 {
 	tldTracker = new tld::TLD();
 }
 
-OpenTldNet::OpenTLD::~OpenTLD()
+OpenTldNet::OpenTld::~OpenTld()
 {
-	this->!OpenTLD();
+	this->!OpenTld();
 }
 
-OpenTldNet::OpenTLD::!OpenTLD()
+OpenTldNet::OpenTld::!OpenTld()
 {
 	if(tldTracker != nullptr)
 	{
@@ -24,19 +24,19 @@ OpenTldNet::OpenTLD::!OpenTLD()
 	tldTracker = nullptr;
 }
 
-void OpenTldNet::OpenTLD::Init(OpenCV::Net::IplImage ^image)
+void OpenTldNet::OpenTld::Init(OpenCV::Net::IplImage ^image)
 {
 	tldTracker->detectorCascade->imgWidth = image->Width;
 	tldTracker->detectorCascade->imgHeight = image->Height;
 	tldTracker->detectorCascade->imgWidthStep = image->WidthStep;
 }
 
-void OpenTldNet::OpenTLD::Release()
+void OpenTldNet::OpenTld::Release()
 {
 	tldTracker->release();	
 }
 
-void OpenTldNet::OpenTLD::SelectObject(OpenCV::Net::IplImage ^image, OpenCV::Net::Rect ^roi)
+void OpenTldNet::OpenTld::SelectObject(OpenCV::Net::IplImage ^image, OpenCV::Net::Rect ^roi)
 {
 	IntPtr handle = image->DangerousGetHandle();
 	cv::Mat cvimage = cv::cvarrToMat(handle.ToPointer());
@@ -51,7 +51,7 @@ void OpenTldNet::OpenTLD::SelectObject(OpenCV::Net::IplImage ^image, OpenCV::Net
 	tldTracker->selectObject(cvimage,  cvRoi);	
 }
 
-void OpenTldNet::OpenTLD::ProcessImage(OpenCV::Net::IplImage ^image)
+void OpenTldNet::OpenTld::ProcessImage(OpenCV::Net::IplImage ^image)
 {
 	IntPtr handle = image->DangerousGetHandle();
 	cv::Mat cvimage = cv::cvarrToMat(handle.ToPointer());
