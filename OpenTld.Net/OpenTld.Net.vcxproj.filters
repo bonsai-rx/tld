@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="OpenTld.Net.cpp" />
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobContour.cpp">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobOperators.cpp">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobProperties.cpp">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobResult.cpp">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\ComponentLabeling.cpp">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\blob.cpp">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\BB.cpp">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\BBPredict.cpp">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\FBTrack.cpp">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\Lk.cpp">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\Median.cpp">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\Clustering.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\DetectionResult.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\DetectorCascade.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\EnsembleClassifier.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\ForegroundDetector.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\MedianFlowTracker.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\NNClassifier.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\TLD.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\TLDUtil.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\OpenTLD\libopentld\tld\VarianceFilter.cpp">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OpenTld.Net.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobContour.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobLibraryConfiguration.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobOperators.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobProperties.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobResult.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\ComponentLabeling.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\blob.h">
+      <Filter>OpenTLD\3rdparty\cvblobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\BB.h">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\BBPredict.h">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\FBTrack.h">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\Lk.h">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\Median.h">
+      <Filter>OpenTLD\libopentld\mftracker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\Clustering.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\DetectionResult.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\DetectorCascade.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\EnsembleClassifier.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\ForegroundDetector.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\IntegralImage.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\MedianFlowTracker.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\NNClassifier.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\NormalizedPatch.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\TLD.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\TLDUtil.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenTLD\libopentld\tld\VarianceFilter.h">
+      <Filter>OpenTLD\libopentld\tld</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenTld.Net.nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="OpenTLD">
+      <UniqueIdentifier>{1875f52e-10c0-4e62-8446-0515ef138216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenTLD\3rdparty">
+      <UniqueIdentifier>{9d7357b9-4c90-478c-8d8f-308e05884106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenTLD\libopentld">
+      <UniqueIdentifier>{ed67de87-f1d8-42d1-b4e5-b80205b925c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenTLD\3rdparty\cvblobs">
+      <UniqueIdentifier>{4abefab8-afd5-4d6b-b901-ca5d51bb7520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenTLD\libopentld\mftracker">
+      <UniqueIdentifier>{673f06a9-b15c-4e61-956c-7ac2b5f082e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenTLD\libopentld\tld">
+      <UniqueIdentifier>{6b480b41-c5fc-4c3c-b64f-241778d5e692}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
