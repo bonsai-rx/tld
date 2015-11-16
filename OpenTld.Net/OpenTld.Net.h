@@ -53,6 +53,24 @@ namespace OpenTld
 			void ProcessImage(OpenCV::Net::IplImage ^image);
 
 			/// <summary>
+			/// Gets or sets a value indicating whether the tracker is enabled.
+			/// </summary>
+			property bool TrackerEnabled
+			{
+				bool get() { return tldTracker->trackerEnabled; }
+				void set(bool value) { tldTracker->trackerEnabled = value; }
+			}
+
+			/// <summary>
+			/// Gets or sets a value indicating whether the detector is enabled.
+			/// </summary>
+			property bool DetectorEnabled
+			{
+				bool get() { return tldTracker->detectorEnabled; }
+				void set(bool value) { tldTracker->detectorEnabled = value; }
+			}
+
+			/// <summary>
 			/// Gets or sets a value indicating whether new object poses should be recorded.
 			/// </summary>
 			property bool LearningEnabled
