@@ -15,11 +15,8 @@ OpenTld::Net::TrackerTld::~TrackerTld()
 
 OpenTld::Net::TrackerTld::!TrackerTld()
 {
-	if(tldTracker != nullptr)
-	{
-		delete tldTracker;
-	}
-	tldTracker = nullptr;
+	delete tldTracker;
+	previous = nullptr;
 }
 
 void OpenTld::Net::TrackerTld::Init(OpenCV::Net::IplImage ^image)
@@ -46,7 +43,8 @@ void OpenTld::Net::TrackerTld::SelectObject(OpenCV::Net::IplImage ^image, OpenCV
 	if (cvRoi->x + cvRoi->width > cvimage.cols) cvRoi->width -= (cvRoi->x + cvRoi->width) - cvimage.cols;
 	if (cvRoi->y + cvRoi->height > cvimage.rows) cvRoi->height -= (cvRoi->y + cvRoi->height) - cvimage.rows;
 
-	tldTracker->selectObject(cvimage,  cvRoi);	
+	tldTracker->selectObject(cvimage,  cvRoi);
+	previous = image;
 }
 
 void OpenTld::Net::TrackerTld::ProcessImage(OpenCV::Net::IplImage ^image)
@@ -54,6 +52,7 @@ void OpenTld::Net::TrackerTld::ProcessImage(OpenCV::Net::IplImage ^image)
 	IntPtr handle = image->DangerousGetHandle();
 	cv::Mat cvimage = cv::cvarrToMat(handle.ToPointer());
 	tldTracker->processImage(cvimage);
+	previous = image;
 }
 
 void OpenTld::Net::TrackerTld::ReadFromFile(String ^fileName)
