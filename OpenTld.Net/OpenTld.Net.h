@@ -129,6 +129,7 @@ namespace OpenTld
 			}
 		private:
 			tld::TLD *tldTracker;
+			OpenCV::Net::IplImage ^previous;
 		};
 	}
 }
