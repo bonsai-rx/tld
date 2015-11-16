@@ -53,6 +53,18 @@ namespace OpenTld
 			void ProcessImage(OpenCV::Net::IplImage ^image);
 
 			/// <summary>
+			/// Load a previously saved tracking model.
+			/// </summary>
+			/// <param name="fileName">The path to the file containing the stored model.</param>
+			void ReadFromFile(String ^fileName);
+
+			/// <summary>
+			/// Save the currently active tracking model to file.
+			/// </summary>
+			/// <param name="fileName">The path to the file that will store the tracking model.</param>
+			void WriteToFile(String ^fileName);
+
+			/// <summary>
 			/// Gets or sets a value indicating whether the tracker is enabled.
 			/// </summary>
 			property bool TrackerEnabled

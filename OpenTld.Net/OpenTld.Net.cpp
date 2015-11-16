@@ -1,9 +1,9 @@
 // This is the main DLL file.
 
 #include "stdafx.h"
-
 #include "OpenTld.Net.h"
 
+using namespace System::Runtime::InteropServices;
 
 OpenTld::Net::TrackerTld::TrackerTld()
 {
@@ -56,4 +56,18 @@ void OpenTld::Net::TrackerTld::ProcessImage(OpenCV::Net::IplImage ^image)
 	IntPtr handle = image->DangerousGetHandle();
 	cv::Mat cvimage = cv::cvarrToMat(handle.ToPointer());
 	tldTracker->processImage(cvimage);
+}
+
+void OpenTld::Net::TrackerTld::ReadFromFile(String ^fileName)
+{
+	IntPtr hFileName = Marshal::StringToHGlobalAnsi(fileName);
+	tldTracker->readFromFile((char *)hFileName.ToPointer());
+	Marshal::FreeHGlobal(hFileName);
+}
+
+void OpenTld::Net::TrackerTld::WriteToFile(String ^fileName)
+{
+	IntPtr hFileName = Marshal::StringToHGlobalAnsi(fileName);
+	tldTracker->writeToFile((char *)hFileName.ToPointer());
+	Marshal::FreeHGlobal(hFileName);
 }
