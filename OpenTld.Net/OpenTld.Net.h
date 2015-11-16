@@ -10,23 +10,23 @@ namespace OpenTld
 {
 	namespace Net
 	{
-		public ref class OpenTld
+		public ref class TrackerTld
 		{
 		public:
 			/// <summary>
-			/// Initializes a new instance of the <see cref="OpenTld"/> class.
+			/// Initializes a new instance of the <see cref="TrackerTld"/> class.
 			/// </summary>
-			OpenTld();
+			TrackerTld();
 
 			/// <summary>
-			/// Destructs an instance of the <see cref="OpenTld"/> class.
+			/// Destructs an instance of the <see cref="TrackerTld"/> class.
 			/// </summary>
-			~OpenTld();
+			~TrackerTld();
 
 			/// <summary>
-			/// Finalizes an instance of the <see cref="OpenTld"/> class.
+			/// Finalizes an instance of the <see cref="TrackerTld"/> class.
 			/// </summary>
-			!OpenTld();
+			!TrackerTld();
 
 			/// <summary>
 			/// Initializes this instance.
