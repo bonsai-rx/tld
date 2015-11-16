@@ -87,13 +87,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>native/include</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\OpenTLD\libopentld;..\OpenTLD\libopentld\mftracker;..\OpenTLD\3rdparty\cvblobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opentld.lib;cvblobs.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>native/lib/debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -101,41 +99,35 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>native/include</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\OpenTLD\libopentld;..\OpenTLD\libopentld\mftracker;..\OpenTLD\3rdparty\cvblobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opentld.lib;cvblobs.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>native/lib64/debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>native/include</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\OpenTLD\libopentld;..\OpenTLD\libopentld\mftracker;..\OpenTLD\3rdparty\cvblobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opentld.lib;cvblobs.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>native/lib/release</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>native/include</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\OpenTLD\libopentld;..\OpenTLD\libopentld\mftracker;..\OpenTLD\3rdparty\cvblobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opentld.lib;cvblobs.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>native/lib64/release</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -144,18 +136,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\blob.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobContour.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobLibraryConfiguration.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobOperators.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobProperties.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\BlobResult.h" />
+    <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\ComponentLabeling.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\BB.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\BBPredict.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\FBTrack.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\Lk.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\mftracker\Median.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\Clustering.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\DetectionResult.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\DetectorCascade.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\EnsembleClassifier.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\ForegroundDetector.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\IntegralImage.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\MedianFlowTracker.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\NNClassifier.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\NormalizedPatch.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\TLD.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\TLDUtil.h" />
+    <ClInclude Include="..\OpenTLD\libopentld\tld\VarianceFilter.h" />
     <ClInclude Include="OpenTld.Net.h" />
-    <ClInclude Include="Stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\blob.cpp" />
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobContour.cpp" />
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobOperators.cpp" />
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobProperties.cpp" />
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\BlobResult.cpp" />
+    <ClCompile Include="..\OpenTLD\3rdparty\cvblobs\ComponentLabeling.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\BB.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\BBPredict.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\FBTrack.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\Lk.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\mftracker\Median.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\Clustering.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\DetectionResult.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\DetectorCascade.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\EnsembleClassifier.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\ForegroundDetector.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\MedianFlowTracker.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\NNClassifier.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\TLD.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\TLDUtil.cpp" />
+    <ClCompile Include="..\OpenTLD\libopentld\tld\VarianceFilter.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="OpenTld.Net.cpp" />
-    <ClCompile Include="Stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Externals\OpenCV.Net\OpenCV.Net\OpenCV.Net.csproj">
