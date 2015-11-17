@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://bitbucket.org/horizongir/opentld.net/raw/d1044b23d6802f888a28a8d549506848d0788f90/LICENSE</licenseUrl>
+    <projectUrl>http://bitbucket.org/horizongir/opentld.net</projectUrl>
+    <iconUrl>https://bitbucket.org/horizongir/bonsai/raw/7aacc64dc4647e57362ab310238591dc197fef0d/Resources/Bonsai.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Gonçalo Lopes © 2015</copyright>
+    <tags>Bonsai Tracking TLD OpenTLD</tags>
+    <dependencies>
+      <dependency id="OpenTld.Net" version="0.1.0" />
+    </dependencies>
+  </metadata>
+</package>
