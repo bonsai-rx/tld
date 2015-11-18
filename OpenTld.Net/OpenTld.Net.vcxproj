@@ -136,6 +136,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="OpenCV.Net">
+      <HintPath>..\packages\OpenCV.Net.3.3.0\lib\net40\OpenCV.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\OpenTLD\3rdparty\cvblobs\blob.h" />
@@ -188,11 +191,6 @@
     <ClCompile Include="..\OpenTLD\libopentld\tld\VarianceFilter.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="OpenTld.Net.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Externals\OpenCV.Net\OpenCV.Net\OpenCV.Net.csproj">
-      <Project>{daf4d704-2c86-4657-9210-db5b847ba8be}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="OpenTld.Net.nuspec" />
