@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenTld.Net", "OpenTld.Net\OpenTld.Net.vcxproj", "{D0E28EB0-D56D-42F2-B2A5-5A3E3FC3968E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCV.Net", "Externals\OpenCV.Net\OpenCV.Net\OpenCV.Net.csproj", "{DAF4D704-2C86-4657-9210-DB5B847BA8BE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2CDDDCB2-0B83-4861-A88B-3BA9282CADA3}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -41,20 +39,6 @@ Global
 		{D0E28EB0-D56D-42F2-B2A5-5A3E3FC3968E}.Release|Win32.Build.0 = Release|Win32
 		{D0E28EB0-D56D-42F2-B2A5-5A3E3FC3968E}.Release|x64.ActiveCfg = Release|x64
 		{D0E28EB0-D56D-42F2-B2A5-5A3E3FC3968E}.Release|x64.Build.0 = Release|x64
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Debug|x64.Build.0 = Debug|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|Win32.ActiveCfg = Release|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|x64.ActiveCfg = Release|Any CPU
-		{DAF4D704-2C86-4657-9210-DB5B847BA8BE}.Release|x64.Build.0 = Release|Any CPU
 		{D9D7C7A1-013F-41B3-8838-C97E8B930BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9D7C7A1-013F-41B3-8838-C97E8B930BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9D7C7A1-013F-41B3-8838-C97E8B930BA5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

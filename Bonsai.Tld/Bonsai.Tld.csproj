@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.props" Condition="Exists('..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -37,6 +38,22 @@
       <HintPath>..\packages\Bonsai.Core.2.1.2\lib\net45\Bonsai.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Bonsai.Dsp, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bonsai.Dsp.2.1.0\lib\net45\Bonsai.Dsp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bonsai.System, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bonsai.System.2.1.0\lib\net45\Bonsai.System.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bonsai.Vision, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bonsai.Vision.2.1.1\lib\net45\Bonsai.Vision.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCV.Net, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCV.Net.3.3.0\lib\net40\OpenCV.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="OpenTld.Net">
       <HintPath>..\Release\OpenTld.Net.dll</HintPath>
     </Reference>
@@ -69,12 +86,6 @@
     <None Include="Bonsai.Tld.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Externals\OpenCV.Net\OpenCV.Net\OpenCV.Net.csproj">
-      <Project>{daf4d704-2c86-4657-9210-db5b847ba8be}</Project>
-      <Name>OpenCV.Net</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -82,7 +93,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.props'))" />
+    <Error Condition="!Exists('..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.targets'))" />
   </Target>
+  <Import Project="..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.targets" Condition="Exists('..\packages\OpenCV.Net.3.3.0\build\net40\OpenCV.Net.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
