@@ -37,6 +37,7 @@ using Bonsai.Vision;
 
 namespace Bonsai.Tld
 {
+    [Description("Tracks a specified object over time using the self-supervised TLD algorithm.")]
     public class TldTracker : Transform<IplImage, ConnectedComponent>
     {
         public TldTracker()
@@ -47,15 +48,19 @@ namespace Bonsai.Tld
             Alternating = false;
         }
 
+        [Description("Indicates whether the tracker is enabled.")]
         public bool Tracking { get; set; }
 
+        [Description("Indicates whether the detector is enabled.")]
         public bool Detection { get; set; }
 
+        [Description("Indicates whether new object poses should be recorded.")]
         public bool Learning { get; set; }
 
+        [Description("Indicates whether the detector is disabled when tracking is available.")]
         public bool Alternating { get; set; }
 
-        [Description("The region of interest inside the input image.")]
+        [Description("The region of interest to track inside the input image.")]
         [Editor("Bonsai.Vision.Design.IplImageInputRectangleEditor, Bonsai.Vision.Design", typeof(UITypeEditor))]
         public Rect RegionOfInterest { get; set; }
 
