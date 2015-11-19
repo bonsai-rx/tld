@@ -33,10 +33,11 @@ using OpenCV.Net;
 using System.ComponentModel;
 using System.Drawing.Design;
 using OpenTld.Net;
+using Bonsai.Vision;
 
 namespace Bonsai.Tld
 {
-    public class TldTracker : Transform<IplImage, IplImage>
+    public class TldTracker : Transform<IplImage, ConnectedComponent>
     {
         public TldTracker()
         {
@@ -58,7 +59,7 @@ namespace Bonsai.Tld
         [Editor("Bonsai.Vision.Design.IplImageInputRectangleEditor, Bonsai.Vision.Design", typeof(UITypeEditor))]
         public Rect RegionOfInterest { get; set; }
 
-        public override IObservable<IplImage> Process(IObservable<IplImage> source)
+        public override IObservable<ConnectedComponent> Process(IObservable<IplImage> source)
         {
             return Observable.Defer(() =>
             {
@@ -71,26 +72,37 @@ namespace Bonsai.Tld
                     tracker.DetectorEnabled = Detection;
                     tracker.LearningEnabled = Learning;
                     tracker.Alternating = Alternating;
-                    var output = input.Clone();
-                    //Initialize
                     if (inputRoi != RegionOfInterest)
                     {
-                        tracker.Init(output);
+                        tracker.Init(input);
                         inputRoi = RegionOfInterest;
-                        tracker.SelectObject(output, inputRoi);
+                        tracker.SelectObject(input, inputRoi);
                         initialized = true;
                     }
 
+                    var component = new ConnectedComponent();
                     if (initialized)
                     {
-                        tracker.ProcessImage(output);
-                        if (tracker.CurrentBoundingBox.HasValue) //When target is lost, bounding box is null
+                        tracker.ProcessImage(input);
+                        if (tracker.CurrentBoundingBox.HasValue)
                         {
-                            var currentRect = tracker.CurrentBoundingBox.Value;
-                            CV.Rectangle(output, currentRect, Scalar.Rgb(0, 255, 0));
+                            var boundingBox = tracker.CurrentBoundingBox.Value;
+                            component.Area = boundingBox.Width * boundingBox.Height;
+                            component.Centroid = new Point2f(
+                                boundingBox.X + boundingBox.Width / 2f,
+                                boundingBox.Y + boundingBox.Height / 2f);
+                            component.Patch = input.GetSubRect(boundingBox);
+                            component.Contour = new BoxContour(boundingBox);
+                            component.MajorAxisLength = 0;
+                            component.MinorAxisLength = 0;
+                        }
+                        else
+                        {
+                            component.Centroid = new Point2f(float.NaN, float.NaN);
+                            component.Orientation = double.NaN;
                         }
                     }
-                    return output;
+                    return component;
                 });
             });
         }
