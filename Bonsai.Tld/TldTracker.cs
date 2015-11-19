@@ -73,22 +73,29 @@ namespace Bonsai.Tld
                 var initialized = false;
                 return source.Select(input =>
                 {
+                    var frame = input;
+                    if (input.Channels == 3)
+                    {
+                        frame = new IplImage(input.Size, input.Depth, 1);
+                        CV.CvtColor(input, frame, ColorConversion.Bgr2Gray);
+                    }
+
                     tracker.TrackerEnabled = Tracking;
                     tracker.DetectorEnabled = Detection;
                     tracker.LearningEnabled = Learning;
                     tracker.Alternating = Alternating;
                     if (inputRoi != RegionOfInterest)
                     {
-                        tracker.Init(input);
+                        tracker.Init(frame);
                         inputRoi = RegionOfInterest;
-                        tracker.SelectObject(input, inputRoi);
+                        tracker.SelectObject(frame, inputRoi);
                         initialized = true;
                     }
 
                     var component = new ConnectedComponent();
                     if (initialized)
                     {
-                        tracker.ProcessImage(input);
+                        tracker.ProcessImage(frame);
                         if (tracker.CurrentBoundingBox.HasValue)
                         {
                             var boundingBox = tracker.CurrentBoundingBox.Value;
