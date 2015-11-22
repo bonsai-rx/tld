@@ -38,7 +38,7 @@ using Bonsai.Vision;
 namespace Bonsai.Tld
 {
     [Description("Tracks a specified object over time using the self-supervised TLD algorithm.")]
-    public class TldTracker : Transform<IplImage, ConnectedComponent>
+    public class TldTracker : Transform<IplImage, TrackedComponent>
     {
         public TldTracker()
         {
@@ -64,7 +64,7 @@ namespace Bonsai.Tld
         [Editor("Bonsai.Vision.Design.IplImageInputRectangleEditor, Bonsai.Vision.Design", typeof(UITypeEditor))]
         public Rect RegionOfInterest { get; set; }
 
-        public override IObservable<ConnectedComponent> Process(IObservable<IplImage> source)
+        public override IObservable<TrackedComponent> Process(IObservable<IplImage> source)
         {
             return Observable.Defer(() =>
             {
@@ -92,7 +92,7 @@ namespace Bonsai.Tld
                         initialized = true;
                     }
 
-                    var component = new ConnectedComponent();
+                    var component = new TrackedComponent();
                     if (initialized)
                     {
                         tracker.ProcessImage(frame);
@@ -114,6 +114,7 @@ namespace Bonsai.Tld
                             component.Orientation = double.NaN;
                         }
                     }
+                    component.Confidence = tracker.CurrentConfidence;
                     return component;
                 });
             });

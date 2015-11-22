@@ -84,6 +84,7 @@
     <Compile Include="BoxContour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TldTracker.cs" />
+    <Compile Include="TrackedComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Bonsai.Tld.nuspec" />
