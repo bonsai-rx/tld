@@ -37,6 +37,7 @@ using Bonsai.Vision;
 
 namespace Bonsai.Tld
 {
+    [DefaultProperty("RegionOfInterest")]
     [Description("Tracks a specified object over time using the self-supervised TLD algorithm.")]
     public class TldTracker : Transform<IplImage, TrackedComponent>
     {
