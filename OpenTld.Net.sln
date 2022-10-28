@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenTld.Net", "OpenTld.Net\OpenTld.Net.vcxproj", "{D0E28EB0-D56D-42F2-B2A5-5A3E3FC3968E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2CDDDCB2-0B83-4861-A88B-3BA9282CADA3}"
@@ -10,7 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2CDDDC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonsai.Tld", "Bonsai.Tld\Bonsai.Tld.csproj", "{D9D7C7A1-013F-41B3-8838-C97E8B930BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bonsai.Tld", "Bonsai.Tld\Bonsai.Tld.csproj", "{D9D7C7A1-013F-41B3-8838-C97E8B930BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30CFF7B8-495C-4C90-AB43-B195DDD81B76}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,5 +61,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE430465-B29E-461D-BBBD-9AFBF5351421}
 	EndGlobalSection
 EndGlobal

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>OpenTld.Net</id>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <title>OpenTLD.NET</title>
     <authors>Xavier Faure</authors>
     <owners>Gonçalo Lopes</owners>
@@ -13,14 +13,14 @@
     <copyright>Xavier Faure © 2015</copyright>
     <tags>OpenTLD Tracking Wrapper</tags>
     <dependencies>
-      <dependency id="OpenCV.Net" version="3.3.0" />
+      <dependency id="OpenCV.Net" version="3.4.1" />
     </dependencies>
   </metadata>
   <files>
-    <file src="..\Release\OpenTld.Net.dll" target="build\net45\bin\x86\v110"/>
-    <file src="..\Release\OpenTld.Net.xml" target="build\net45\bin\x86\v110"/>
-    <file src="..\x64\Release\OpenTld.Net.dll" target="build\net45\bin\x64\v110"/>
-    <file src="..\x64\Release\OpenTld.Net.xml" target="build\net45\bin\x64\v110"/>
-    <file src="NuGet\build\net45\OpenTld.Net.props" target="build\net45"/>
+    <file src="..\Release\OpenTld.Net.dll" target="build\net462\bin\x86\v110"/>
+    <file src="..\Release\OpenTld.Net.xml" target="build\net462\bin\x86\v110"/>
+    <file src="..\x64\Release\OpenTld.Net.dll" target="build\net462\bin\x64\v110"/>
+    <file src="..\x64\Release\OpenTld.Net.xml" target="build\net462\bin\x64\v110"/>
+    <file src="NuGet\build\net462\OpenTld.Net.props" target="build\net462"/>
   </files>
 </package>
